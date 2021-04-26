@@ -1,0 +1,13 @@
+create table requests(
+id int NOT NULL AUTO_INCREMENT,
+usrname varchar(255),
+discname varchar(255) NOT NULL,
+allowed boolean,
+vote boolean,
+voted boolean,
+comment varchar(255),
+PRIMARY KEY(id)
+);
+
+select count(vote) from requests where vote=true and discname=''; 
+insert into requests values(1,'a','abc',true,true,true,'not bad');
